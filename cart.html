@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart</title>
+    <link rel="stylesheet" href="style/cart.css">
+    <link rel="stylesheet" href="style/search.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+</head>
+<body>
+    <!-- Simple pop-up dialog box containing a form -->
+
+    <!--navbar section start here-->
+    <nav class="navbar">
+        <div class="left">
+            <div class="logo">
+                <img src="logo.png" alt="">
+                <p><a href="">Explore</a><span>Plus</span><img src="logo_plus.png" alt=""></p>
+            </div>
+            <div class="wrapper">
+                <div class="search-input">
+                    <a href="" target="_blank" hidden></a>
+                    <input type="text" placeholder="Search for products/brands and more">
+                    <div class="autocom-box">
+                        <!-- here list are inserted from javascript -->
+                    </div>
+                    <div class="icon"><i class="fas fa-search"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <button id="signup">Login</button> 
+            <!--this is sign up/login box when a user hover on login button-->
+            <div class="signup_box" id="box">
+                <div class="pointer" >
+
+                </div>
+               
+                <div class="signup_container">
+                    <ul>
+                       <li><div class="top"><p>New Customer?<span><a href="">Sign Up</a></span></p></div></li>
+                       <li><div class="signup"><p><span><i class="fas fa-user"></i></span>My Profile </p></div></li>
+                       <li><div class="signup"><p><span><i class="fas fa-user-plus"></i></span>FlipKart Plus Zone </p></div></li>
+                       <li><div class="signup"><p><span><i class="fas fa-cart-arrow-down"></i></span>Orders</p></div></li>
+                       <li><div class="signup"><p><span><i class="fas fa-heart"></i></span>Wishlist </p></div></li>
+                       <li><div class="signup"><p><span><i class="fas fa-award"></i></span>Revards </p></div></li>
+                       <li><div class="signup"><p><span><i class="fas fa-wallet"></i></span>Gift Cards </p></div></li>
+                    </ul>
+                </div>
+            </div>
+            <!--this is a signup/login page appear when a user hover on login buttonb ends here-->
+            
+        </div>
+
+    </nav>
+    <!--navbar section  end here-->
+    <!--content section start here-->
+   
+    <div class="cart_content">
+        <h2 class="heading">My Cart</h2>
+        <img src="images/my_cart_background.png" alt="">
+        <h3>Missing Cart items?</h3>
+        <p>Login to see the items you added previously</p>
+        <button>Login</button>
+    </div>
+    <!-- content section end here-->
+
+    <hr>
+    <!--footer section start here-->
+    <div class="footer">
+        <p>Policies: <a href="">Returns Policy</a><span>|</span><a href="">Terms of Usse</a><span>|</span><a href="">Security</a><span>|</span>
+        <a href="">Privacy</a><span>|</span><a href="">Infringment</a>
+        </p>
+        <p>© 2021 Vikash Prakash</p>
+        <p>Need Help? Visit the <a href="" class="blue">Help Center </a> or <a href="" class="blue">Contact Us</a></p>
+    </div>
+    <!--footer section end here-->
+
+    <!--javascript code linked here-->
+    <script src="js/cart.js"></script>
+    <script src="js/suggestions.js"></script>
+    <!--javascript code linked end here-->
+</body>
+</html>

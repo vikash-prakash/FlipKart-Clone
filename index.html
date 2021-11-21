@@ -1,0 +1,2055 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipcart Clone- By Vikash prakash</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/search.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+    <!-- container start -->
+    <!--dialog box pop up when sign up clicked start here-->
+    <!-- Simple pop-up dialog box containing a form -->
+      <div class="moadal_bg">
+            <div class="modal">
+                <div class="left">
+                    <h2 id="h2">Looks like you're new here!</h2>
+                    <p id="login_p">Sign up with your mobile number to get started</p>
+                    <img src="images/model_bg_p.png" alt="">
+                </div>
+                <div class="right">
+                    <input type="number" placeholder="Enter Mobile Number" autofocus id="number" class="place" >
+                    <div class="login_password">
+                       <input type="password" name="password" id="" placeholder="Enter password">
+                       <a href="#" class="forgot_password_for_login">Forgot password?</a>
+                    </div>
+                    
+                    <p>By continuing, you agree to Flipkart's <a href="">Terms of Use </a> and <a href=""> Privacy Policy.</a></p>
+                    <div class="btn"><button class="continue">CONTIINUE</button><p id="or_for_login">Or</p><button class="existing" id="login_popup_btn">Existing User? Log in</button></div>
+                    <p id="create_new_account_for_login"><a href="">New to Flipkart? Create Account</a></p>
+                    
+                </div>
+            </div>
+            <div class="close_signup">
+                <span>&#215;</span>
+            </div>
+        </div>
+
+  
+    <!--dialog box pop up when sign up clicked end here-->
+    <!-- navbar section start -->
+    <nav class="navbar">
+        <div class="left">
+            <div class="logo">
+                <img src="logo.png" alt="">
+                <p><a href="">Explore</a><span>Plus</span><img src="logo_plus.png" alt=""></p>
+            </div>
+            <div class="wrapper">
+                <div class="search-input">
+                    <a href="" target="_blank" hidden></a>
+                    <input type="text" placeholder="Search for products/brands and more">
+                    <div class="autocom-box">
+                        <!-- here list are inserted from javascript -->
+                    </div>
+                    <div class="icon"><i class="fas fa-search"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <button id="signup">Login</button> 
+            <!--this is sign up/login box when a user hover on login button-->
+            <div class="signup_box" id="box">
+                <div class="pointer" >
+
+                </div>
+               
+                <div class="signup_container">
+                    <ul>
+                       <li><div class="top"><p>New Customer?<span><a href="#" id="signup_clicked">Sign Up</a></span></p></div></li>
+                       <li><div class="signup"><p><span><i class="fas fa-user"></i></span>My Profile </p></div></li>
+                       <li><div class="signup"><p><span><i class="fas fa-user-plus"></i></span>FlipKart Plus Zone </p></div></li>
+                       <li><div class="signup"><p><span><i class="fas fa-cart-arrow-down"></i></span>Orders</p></div></li>
+                       <li><div class="signup"><p><span><i class="fas fa-heart"></i></span>Wishlist </p></div></li>
+                       <li><div class="signup"><p><span><i class="fas fa-award"></i></span>Revards </p></div></li>
+                       <li><div class="signup"><p><span><i class="fas fa-wallet"></i></span>Gift Cards </p></div></li>
+                    </ul>
+                </div>
+            </div>
+            <!--this is a signup/login page appear when a user hover on login buttonb ends here-->
+            <div class="dropdown_menu">
+                <a href="#" id="more" >More</a>
+                <i class="fas fa-angle-down" id="drop_down"></i>
+                
+            </div>
+            <!--this is a more page appear when hover on this text start here-->
+            <div class="more_box" id="mbox">
+                <div class="pointer" >
+
+                </div>
+               
+                <div class="signup_container">
+                    <ul>
+                       
+                       <li><div class="signup"><p><span><i class="fas fa-bell"></i></span>Notification Preferences </p></div></li>
+                       <li><div class="signup"><p><span><i class="fas fa-briefcase"></i></span>Sell On FlipKart </p></div></li>
+                       <li><div class="signup"><p><span><i class="fas fa-calendar"></i></span>24&#215;7 Customer Care</p></div></li>
+                       <li><div class="signup"><p><span><i class="fas fa-chart-line"></i></span>Advertise </p></div></li>
+                       <li><div class="signup"><p><span><i class="fas fa-arrow-down"></i></span>Download App </p></div></li>
+                       
+                    </ul>
+                </div>
+            </div>
+            
+
+            <div class="cart" >
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i><span>Cart</span></a>
+            </div>
+        </div>
+      
+
+    </nav>
+    <!-- navbar section end -->
+    <!-- category section start -->
+
+    <div class="cat-container">
+        <div class="cat">
+            <img src="images/item1.png" alt="">
+            <h3><a href="#">Top Offers</a></h3>
+        </div>
+        <div class="cat">
+            <img src="images/item2.png" alt="">
+            <h3><a href="#">Grocery</a></h3>
+        </div>
+        <div class="cat">
+            <img src="images/item3.png" alt="">
+            <h3><a href="#">Mobiles</a></h3>
+        </div>
+        <div class="cat">
+            <img src="images/item4.png" alt="">
+            <h3><a href="#">Fashion</a></h3>
+        </div>
+        <div class="cat">
+            <img src="images/item5.png" alt="">
+            <h3><a href="#">Electronics</a></h3>
+        </div>
+        <div class="cat">
+            <img src="images/item6.png" alt="">
+            <h3><a href="#">Home</a></h3>
+        </div>
+        <div class="cat">
+            <img src="images/item7.png" alt="">
+            <h3><a href="#">Appliances</a></h3>
+        </div>
+        <div class="cat">
+            <img src="images/item8.png" alt="">
+            <h3><a href="#">Travel</a></h3>
+        </div>
+        <div class="cat">
+            <img src="images/item9.png" alt="">
+            <h3><a href="#">Beauty,Toys & more</a></h3>
+        </div>
+
+    </div>
+
+    <!-- category section end -->
+    <!-- slider section start -->
+    <div class="slider-container" id="slider-cont">
+        <div id="slider">
+            <ul id="slideWrap">
+                <li><a href="#"><img src="images/slider-img.jpg" alt="" </a></li>
+                <li><a href="#"><img src="images/slider-img (1).jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/slider-img (2).jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/slider-img (3).jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/slider-img (3).jpg" alt=""></a></li>
+            </ul>
+
+        </div>
+        <a id="prev" href="#"><i class="fas fa-chevron-left"></i></a>
+        <a id="next" href="#"><i class="fas fa-chevron-right"></i></a>
+
+    </div>
+    <!-- slider section end -->
+    <!-- offer/discount section start -->
+    <div class="best_value_fashion_and_sticker_container">
+        <div class="best_value_fashion">
+            <div class="view_all">
+                <h3>Winter Essentials</h3><button>VIEW ALL</button>
+            </div>
+            <div class="product_slider_container" id="offer_slider">
+                <div class="product">
+                    <div class="img_container">
+                        <img src="images/offer_p1.jpeg" alt="">
+                    </div>
+                    <p>Womens</p>
+                    <p><span>Min 60% Off</span> </p>
+                    <p class="explore">Explore Now!</p>
+                </div>
+                <div class="product">
+                    <div class="img_container">
+                        <img src="images/offer_p7.jpeg" alt="">
+                    </div>
+                    <p>Women's Readymade Bla..</p>
+                    <p><span>Min 60% Off</span> </p>
+                    <p class="explore">Explore Now!</p>
+                </div>
+                <div class="product">
+                    <div class="img_container">
+                        <img src="images/offer_p6.jpeg" alt="">
+                    </div>
+                    <p>Women's Ponchos</p>
+                    <p><span>Min 60% Off</span> </p>
+                    <p class="explore">Big Savings!</p>
+                </div>
+                <div class="product">
+                    <div class="img_container">
+                        <img src="images/offer_p5.jpeg" alt="">
+                    </div>
+                    <p>Women's Scarves</p>
+                    <p><span>Min 60% Off</span> </p>
+                    <p class="explore">Explore Now!</p>
+                </div>
+                <div class="product">
+                    <div class="img_container">
+                        <img src="images/offer_p4.jpeg" alt="">
+                    </div>
+                    <p>Women's Stoles</p>
+                    <p><span>Min 60% Off</span> </p>
+                    <p class="explore">Shop Now!</p>
+                </div>
+                <div class="product">
+                    <div class="img_container">
+                        <img src="images/offer_p8.jpeg" alt="">
+                    </div>
+                    <p>Dress Materials</p>
+                    <p><span>Min 80% Off</span> </p>
+                    <p class="explore">Explore Now!</p>
+                </div>
+                <div class="product">
+                    <div class="img_container">
+                        <img src="images/offer_p9.jpeg" alt="">
+                    </div>
+                    <p>Womrn's Sarees</p>
+                    <p><span>Min 70% Off</span> </p>
+                    <p class="explore">Grab Now!</p>
+                </div>
+                <div class="product">
+                    <div class="img_container">
+                        <img src="images/offer_p10.jpeg" alt="">
+                    </div>
+                    <p>Women's Dress Materials</p>
+                    <p><span>Min 80% Off</span> </p>
+                    <p class="explore">Big Savings!</p>
+                </div>
+                <div class="product">
+                    <div class="img_container">
+                        <img src="images/offer_p11.jpeg" alt="">
+                    </div>
+                    <p>Dresses And Gowns</p>
+                    <p><span>Min 70% Off</span> </p>
+                    <p class="explore">Buy Now!</p>
+                </div>
+                <div class="product">
+                    <div class="img_container">
+                        <img src="images/offer_p12.jpeg" alt="">
+                    </div>
+                    <p>Women's Laggins And C..</p>
+                    <p><span>Min 80% Off</span> </p>
+                    <p class="explore">Shop Now!</p>
+                </div>
+                <div class="product">
+                    <div class="img_container">
+                        <img src="images/offer_p13.jpeg" alt="">
+                    </div>
+                    <p>Women's Kurtaas</p>
+                    <p><span>Min 60% Off</span> </p>
+                    <p class="explore">Explore Now!</p>
+                </div>
+                <div class="product">
+                    <div class="img_container">
+                        <img src="images/offer_p14.jpeg" alt="">
+                    </div>
+                    <p>Women's Blouse</p>
+                    <p><span>Min 70% Off</span> </p>
+                    <p class="explore">Grab Now!</p>
+                </div>
+            </div>
+            <button id="prev_offer"><i class="fas fa-chevron-left"></i></button>
+            <button id="next_offer"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="sticker">
+            <img src="images/sticker.jpg" alt="">
+        </div>
+    </div>
+
+    <!-- offer/discout section end -->
+
+    <!-- bank offers sections start -->
+    <div class="bank_offers_container">
+        <img src="images/bankoffers1.jpg" alt="">
+    </div>
+    <!-- bank offers sections end -->
+    <!-- fashion deal secton start -->
+    <div class="best_value_fashion_and_sticker_container" id="best_value-fashion">
+        <div class="best_value_fashion" id="top_rated_appliances">
+            <div class="view_all">
+                <h3>Top Rated Appliances For You</h3><button>VIEW ALL</button>
+            </div>
+            <div class="product_slider_container" id="deal_slider">
+                <div class="product ">
+                    <div class="img_container">
+                        <img src="images/deal_p.jpeg" alt="">
+                    </div>
+                    <p>Premium TVs</p>
+                    <p><span>Grab it Now!</span> </p>
+                    <p class="explore">From ₹44,999</p>
+                </div>
+                <div class="product ">
+                    <div class="img_container">
+                        <img src="images/deal_p1.jpeg" alt="">
+                    </div>
+                    <p>Inverters</p>
+                    <p><span>From ₹4,599</span> </p>
+                    <p class="explore">Luminous,Microtech & More</p>
+                </div>
+                <div class="product">
+                    <div class="img_container">
+                        <img src="images/deal_p2.jpeg" alt="">
+                    </div>
+                    <p>Induction Coocktops</p>
+                    <p><span>Up to 65% Off</span> </p>
+                    <p class="explore">Philips,prestige & More</p>
+                </div>
+                <div class="product">
+                    <div class="img_container">
+                        <img src="images/deal_p3.jpeg" alt="">
+                    </div>
+                    <p>Electric Kettles</p>
+                    <p><span>Up to 70% Off</span> </p>
+                    <p class="explore">Instant Food Maker</p>
+                </div>
+                <div class="product ">
+                    <div class="img_container">
+                        <img src="images/deal_p4.jpeg" alt="">
+                    </div>
+                    <p>Copper Water Purifiers</p>
+                    <p><span>From ₹5,199</span> </p>
+                    <p class="explore">Lipure,Aquaguard..</p>
+                </div>
+                <div class="product ">
+                    <div class="img_container">
+                        <img src="images/deal_p5.jpeg" alt="">
+                    </div>
+                    <p>Top Load Washing Machines</p>
+                    <p><span>From ₹9,490</span> </p>
+                    <p class="explore">Up to ₹1,250 on Supercoins</p>
+                </div>
+                <div class="product ">
+                    <div class="img_container">
+                        <img src="images/deal_p6.jpeg" alt="">
+                    </div>
+                    <p>Samsung Regrigrator</p>
+                    <p><span>Min 70% Off</span> </p>
+                    <p class="explore">Grab Now!</p>
+                </div>
+                <div class="product ">
+                    <div class="img_container">
+                        <img src="images/deal_p4.jpeg" alt="">
+                    </div>
+                    <p>Electric Kettles</p>
+                    <p><span>From ₹4,199</span> </p>
+                    <p class="explore">Big Savings!</p>
+                </div>
+                <div class="product ">
+                    <div class="img_container">
+                        <img src="images/deal_p6.jpeg" alt="">
+                    </div>
+                    <p>Samsung Regrigrator</p>
+                    <p><span> Up to 65% Off</span> </p>
+                    <p class="explore">Buy Now!</p>
+                </div>
+                <div class="product ">
+                    <div class="img_container">
+                        <img src="images/deal_p2.jpeg" alt="">
+                    </div>
+                    <p>Induction Coocktops.</p>
+                    <p><span>Min 80% Off</span> </p>
+                    <p class="explore">Shop Now!</p>
+                </div>
+                <div class="product ">
+                    <div class="img_container">
+                        <img src="images/deal_p5.jpeg" alt="">
+                    </div>
+                    <p>Top Load Washing Machines</p>
+                    <p><span>Min ₹1,950 Off</span> </p>
+                    <p class="explore">Big Savings</p>
+                </div>
+                <div class="product ">
+                    <div class="img_container">
+                        <img src="images/deal_p1.jpeg" alt="">
+                    </div>
+                    <p>Inverters</p>
+                    <p><span>Min 70% Off</span> </p>
+                    <p class="explore">Grab Now!</p>
+                </div>
+                <div class="product ">
+                    <div class="img_container">
+                        <img src="images/deal_p3.jpeg" alt="">
+                    </div>
+                    <p>Electric Kettles</p>
+                    <p><span>Min 70% Off</span> </p>
+                    <p class="explore">Grab Now!</p>
+                </div>
+                <div class="product ">
+                    <div class="img_container">
+                        <img src="images/deal_p6.jpeg" alt="">
+                    </div>
+                    <p>Women's Dress Materials</p>
+                    <p><span>Min 80% Off</span> </p>
+                    <p class="explore">Big Savings!</p>
+                </div>
+                <div class="product ">
+                    <div class="img_container">
+                        <img src="images/deal_p3.jpeg" alt="">
+                    </div>
+                    <p>Dresses And Gowns</p>
+                    <p><span>Min 70% Off</span> </p>
+                    <p class="explore">Buy Now!</p>
+                </div>
+            </div>
+            <button id="prev_deal"><i class="fas fa-chevron-left"></i></button>
+            <button id="next_deal"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+    </div>
+    <!-- fashion deal section end -->
+    <!-- best electronic section start -->
+    <div class="best_value_fashion_and_sticker_container" id="best_electrics_deals">
+        <div class="best_value_fashion" id="top_rated_appliances">
+            <div id="electronics_view_all">
+                <h3>Best Of <br> Electronics</h3><button>VIEW ALL</button><img src="images/electronics.jpg" alt="">
+            </div>
+            <div class="product_slider_container" id="electronic_slide">
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/elec_p.jpeg" alt="">
+                    </div>
+                    <p>TV Streaming Devices</p>
+                    <p><span> Up to 60% Off</span>!</span> </p>
+                    <p class="explore">Google,Airtel & More</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/elect_p1.jpeg" alt="">
+                    </div>
+                    <p>Top 10 DSLRs & Mirrorless </p>
+                    <p><span>From ₹23,999</span> </p>
+                    <p class="explore">Upto ₹10,000 Off on an Exchange*</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/elect_p2.jpeg" alt="">
+                    </div>
+                    <p>Best Deals On Printers</p>
+                    <p><span>From ₹2,149*</span> </p>
+                    <p class="explore">HP,Canon & More</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/elect_p3.jpeg" alt="">
+                    </div>
+                    <p>Top 20 Cameras</p>
+                    <p><span>From ₹3,999</span> </p>
+                    <p class="explore">DSLRs,Action & More</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/elect_p4.jpeg" alt="">
+                    </div>
+                    <p>Cameras Lens</p>
+                    <p><span>From ₹5,499</span> </p>
+                    <p class="explore">Canon,Nicon & tamron</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/elect_p5.jpeg" alt="">
+                    </div>
+                    <p>Blutooth Headphones</p>
+                    <p><span>Upto 75% Off</span> </p>
+                    <p class="explore">realme,Boat & More</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/elect_p6.jpeg" alt="">
+                    </div>
+                    <p>Best Of Hair Dryers</p>
+                    <p><span>From ₹299</span> </p>
+                    <p class="explore">Philips,Nova,havells & More</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p4.jpeg" alt="">
+                    </div>
+                    <p>Electric Kettles</p>
+                    <p><span>From ₹4,199</span> </p>
+                    <p class="explore">Big Savings!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p6.jpeg" alt="">
+                    </div>
+                    <p>Samsung Regrigrator</p>
+                    <p><span> Up to 65% Off</span> </p>
+                    <p class="explore">Buy Now!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p2.jpeg" alt="">
+                    </div>
+                    <p>Induction Coocktops.</p>
+                    <p><span>Min 80% Off</span> </p>
+                    <p class="explore">Shop Now!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p5.jpeg" alt="">
+                    </div>
+                    <p>Top Load Washing Machines</p>
+                    <p><span>Min ₹1,950 Off</span> </p>
+                    <p class="explore">Big Savings</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p1.jpeg" alt="">
+                    </div>
+                    <p>Inverters</p>
+                    <p><span>Min 70% Off</span> </p>
+                    <p class="explore">Grab Now!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p3.jpeg" alt="">
+                    </div>
+                    <p>Electric Kettles</p>
+                    <p><span>Min 70% Off</span> </p>
+                    <p class="explore">Grab Now!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p6.jpeg" alt="">
+                    </div>
+                    <p>Women's Dress Materials</p>
+                    <p><span>Min 80% Off</span> </p>
+                    <p class="explore">Big Savings!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p3.jpeg" alt="">
+                    </div>
+                    <p>Dresses And Gowns</p>
+                    <p><span>Min 70% Off</span> </p>
+                    <p class="explore">Buy Now!</p>
+                </div>
+            </div>
+            <button id="prev_best_electronics"><i class="fas fa-chevron-left"></i></button>
+            <button id="next_best_electronics"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+    </div>
+    <!-- best electronic section end -->
+
+    <!-- offer sticker section start -->
+
+    <div class="offer_sticker_container">
+        <div class="sticker">
+            <img src="images/offer_sticker_p.jpg" alt="">
+        </div>
+        <div class="sticker">
+            <img src="images/offer_sticker_p1.jpg" alt="">
+        </div>
+        <div class="sticker">
+            <img src="images/offer_sticker_p2.jpeg" alt="">
+        </div>
+    </div>
+    <!-- offer sticker section end -->
+    <!-- fashion brands on discount section start -->
+    <div class="best_value_fashion_and_sticker_container" id="fashion_brand">
+        <div class="best_value_fashion" id="top_rated_appliances">
+            <div id="fashion_brand_view_all">
+                <h3>Fashion Brands on<br>Discounts</h3><button>VIEW ALL</button><img src="images/electronics1.jpg"
+                    alt="">
+            </div>
+            <div class="product_slider_container" id="fashion_brand_slider">
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/fashion_p.jpg" alt="">
+                    </div>
+                    <p>Boy's and Girl's Clothing</p>
+                    <p><span>Min. 50% Off</span>!</span> </p>
+                    <p class="explore">Pepe jeans,Allen Solley & More</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/fashion_p1.jpeg" alt="">
+                    </div>
+                    <p>Aurelia,Biba,W & More </p>
+                    <p><span>60-80% Off</span> </p>
+                    <p class="explore">Unbeatable Deals on Top Brands</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/fashion_p2.jpeg" alt="">
+                    </div>
+                    <p>Branded Kurtis & Sets</p>
+                    <p><span>Min. 60% Off</span> </p>
+                    <p class="explore">Libas,w & ani..</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/fashion_p3.jpeg" alt="">
+                    </div>
+                    <p>Fastrack,Timex,Sonata</p>
+                    <p><span>From ₹499</span> </p>
+                    <p class="explore">Rush to Grab the Best Offer</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/fashion_p4.jpeg" alt="">
+                    </div>
+                    <p>Trendy Backpacks!</p>
+                    <p><span>Under ₹599</span> </p>
+                    <p class="explore">Wildcraft</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/elect_p5.jpeg" alt="">
+                    </div>
+                    <p>Blutooth Headphones</p>
+                    <p><span>Upto 75% Off</span> </p>
+                    <p class="explore">realme,Boat & More</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/elect_p6.jpeg" alt="">
+                    </div>
+                    <p>Best Of Hair Dryers</p>
+                    <p><span>From ₹299</span> </p>
+                    <p class="explore">Philips,Nova,havells & More</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p4.jpeg" alt="">
+                    </div>
+                    <p>Electric Kettles</p>
+                    <p><span>From ₹4,199</span> </p>
+                    <p class="explore">Big Savings!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p6.jpeg" alt="">
+                    </div>
+                    <p>Samsung Regrigrator</p>
+                    <p><span> Up to 65% Off</span> </p>
+                    <p class="explore">Buy Now!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p2.jpeg" alt="">
+                    </div>
+                    <p>Induction Coocktops.</p>
+                    <p><span>Min 80% Off</span> </p>
+                    <p class="explore">Shop Now!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p5.jpeg" alt="">
+                    </div>
+                    <p>Top Load Washing Machines</p>
+                    <p><span>Min ₹1,950 Off</span> </p>
+                    <p class="explore">Big Savings</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p1.jpeg" alt="">
+                    </div>
+                    <p>Inverters</p>
+                    <p><span>Min 70% Off</span> </p>
+                    <p class="explore">Grab Now!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p3.jpeg" alt="">
+                    </div>
+                    <p>Electric Kettles</p>
+                    <p><span>Min 70% Off</span> </p>
+                    <p class="explore">Grab Now!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p6.jpeg" alt="">
+                    </div>
+                    <p>Women's Dress Materials</p>
+                    <p><span>Min 80% Off</span> </p>
+                    <p class="explore">Big Savings!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p3.jpeg" alt="">
+                    </div>
+                    <p>Dresses And Gowns</p>
+                    <p><span>Min 70% Off</span> </p>
+                    <p class="explore">Buy Now!</p>
+                </div>
+            </div>
+            <button id="prev_fashion_brand"><i class="fas fa-chevron-left"></i></button>
+            <button id="next_fashion_brand"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+    </div>
+    <!-- fashion brands on discout section end -->
+
+    <!--second offer section start-->
+    <div class="offer_sticker_container">
+        <div class="sticker">
+            <img src="images/offer_sticker_p3.jpg" alt="">
+        </div>
+        <div class="sticker">
+            <img src="images/offer_sticker_p4.jpg" alt="">
+        </div>
+        <div class="sticker">
+            <img src="images/offer_sticker_p5.jpg" alt="">
+        </div>
+    </div>
+
+    <!--second offer section end-->
+
+    <!-- trending deals section start -->
+    <div class="best_value_fashion_and_sticker_container" id="trending_deals">
+        <div class="best_value_fashion" id="top_rated_appliances">
+            <div id="trending_deals_view_all">
+                <h3>Trending Deals</h3><button>VIEW ALL</button><img src="images/electronics1.jpg" alt="">
+            </div>
+            <div class="product_slider_container" id="trending_deals_slider">
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/trending_deals_p.jpeg" alt="">
+                    </div>
+                    <p>Card Holder</p>
+                    <p><span>From ₹99</span>!</span> </p>
+                    <p class="explore">Explore Now!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/trending_deals_p1.jpeg" alt="">
+                    </div>
+                    <p>Juarez guitars </p>
+                    <p><span>Up to 75% Off</span> </p>
+                    <p class="explore">Explore Now!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/trending_deals_p2.jpeg" alt="">
+                    </div>
+                    <p>Cycling Accessories</p>
+                    <p><span>From ₹79 </span> </p>
+                    <p class="explore">Buy Now!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/trending_deals_p3.jpeg" alt="">
+                    </div>
+                    <p>Cricket Balls</p>
+                    <p><span>From ₹79</span> </p>
+                    <p class="explore">Buy Now!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/trending_deals_p4.jpeg" alt="">
+                    </div>
+                    <p>Card Holders</p>
+                    <p><span>From ₹99</span> </p>
+                    <p class="explore">Expore Now!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/trending_deals_p5.jpeg" alt="">
+                    </div>
+                    <p>Baby powder</p>
+                    <p><span>Upto 50% Off</span> </p>
+                    <p class="explore">Pigeon & More</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/elect_p6.jpeg" alt="">
+                    </div>
+                    <p>Best Of Hair Dryers</p>
+                    <p><span>From ₹299</span> </p>
+                    <p class="explore">Philips,Nova,havells & More</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p4.jpeg" alt="">
+                    </div>
+                    <p>Electric Kettles</p>
+                    <p><span>From ₹4,199</span> </p>
+                    <p class="explore">Big Savings!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p6.jpeg" alt="">
+                    </div>
+                    <p>Samsung Regrigrator</p>
+                    <p><span> Up to 65% Off</span> </p>
+                    <p class="explore">Buy Now!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p2.jpeg" alt="">
+                    </div>
+                    <p>Induction Coocktops.</p>
+                    <p><span>Min 80% Off</span> </p>
+                    <p class="explore">Shop Now!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p5.jpeg" alt="">
+                    </div>
+                    <p>Top Load Washing Machines</p>
+                    <p><span>Min ₹1,950 Off</span> </p>
+                    <p class="explore">Big Savings</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p1.jpeg" alt="">
+                    </div>
+                    <p>Inverters</p>
+                    <p><span>Min 70% Off</span> </p>
+                    <p class="explore">Grab Now!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p3.jpeg" alt="">
+                    </div>
+                    <p>Electric Kettles</p>
+                    <p><span>Min 70% Off</span> </p>
+                    <p class="explore">Grab Now!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p6.jpeg" alt="">
+                    </div>
+                    <p>Women's Dress Materials</p>
+                    <p><span>Min 80% Off</span> </p>
+                    <p class="explore">Big Savings!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p3.jpeg" alt="">
+                    </div>
+                    <p>Dresses And Gowns</p>
+                    <p><span>Min 70% Off</span> </p>
+                    <p class="explore">Buy Now!</p>
+                </div>
+            </div>
+            <button id="prev_trending_deals"><i class="fas fa-chevron-left"></i></button>
+            <button id="next_trending_deals"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+    </div>
+    <!-- trending deals section end -->
+
+    <!--third offer section start-->
+    <div class="offer_sticker_container">
+        <div class="sticker">
+            <img src="images/offer_sticker_p6.jpg" alt="">
+        </div>
+        <div class="sticker">
+            <img src="images/offer_sticker_p7.jpeg" alt="">
+        </div>
+        <div class="sticker">
+            <img src="images/offer_sticker_p8.jpeg" alt="">
+        </div>
+    </div>
+
+    <!--third offer section end-->
+
+    <!-- feature brands section start -->
+    <div class="featured_brand">
+        <div class="featured_text">
+            <h3>Featured brand</h3>
+        </div>
+        <ul id="featured_brand_slider">
+            <li><img src="images/featured_p.jpeg" alt=""></li>
+            <li><img src="images/featured_p1.jpeg" alt=""></li>
+            <li><img src="images/featured_p2.jpeg" alt=""></li>
+            <li><img src="images/featured_p3.jpeg" alt=""></li>
+            <li><img src="images/featured_p4.jpeg" alt=""></li>
+            <li><img src="images/featured_p5.jpeg" alt=""></li>
+            <li><img src="images/featured_p6.jpeg" alt=""></li>
+            <li><img src="images/featured_p7.jpeg" alt=""></li>
+        </ul>
+        <button id="prev_featured_brand"><i class="fas fa-chevron-left"></i></button>
+        <button id="next_featured_brand"><i class="fas fa-chevron-right"></i></button>
+    </div>
+    <!-- feature brands section end -->
+
+    <!--fourth offer sticker section start-->
+    <div class="fourth_offer_sticker_container">
+        <div class="fourth_sticker">
+            <img src="images/offer_sticker_p9.jpg" alt="">
+        </div>
+        <div class="fourth_sticker">
+            <img src="images/offer_sticker_p10.jpg" alt="">
+        </div>
+        <div class="fourth_sticker">
+            <img src="images/offer_sticker_p11.jpg" alt="">
+        </div>
+        <div class="fourth_sticker">
+            <img src="images/offer_sticker_p12.jpg" alt="">
+        </div>
+    </div>
+    <!--fourth offer sticker section end-->
+
+    <!-- fashion best seller section start -->
+    <div class="best_value_fashion_and_sticker_container" id="fashion_best_seller">
+        <div class="best_value_fashion" id="top_rated_appliances">
+            <div id="fashion_best_view_all">
+                <h3>Fashion Best<br>Sellers</h3><button>VIEW ALL</button><img src="images/electronics1.jpg" alt="">
+            </div>
+            <div class="product_slider_container" id="fashion_best_seller_slider">
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/fashion_best_p.jpeg" alt="">
+                    </div>
+                    <p>Arrow,Peter England,Ethnix..</p>
+                    <p><span>50-80% Off</span>!</span> </p>
+                    <p class="explore">Kurtas,Sets,Nehru Jacket </p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/fashion_best_p1.jpeg" alt="">
+                    </div>
+                    <p>Aurelia,Anmi,Varanga.. </p>
+                    <p><span>60-80% Off</span> </p>
+                    <p class="explore">Top Brands,Best Discount!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/fashion_best_p2.jpeg" alt="">
+                    </div>
+                    <p>Hurry!!,Limited Priod Offer</p>
+                    <p><span>Min.70%Extra10%Off</span> </p>
+                    <p class="explore">Harpa,Clovia,Wrangle</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/fashion_best_p3.jpeg" alt="">
+                    </div>
+                    <p>Biwa,W,Aure By Aurelia</p>
+                    <p><span>60-70% Off</span> </p>
+                    <p class="explore">Isse sasta kahin nhi!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/fashion_best_p4.jpeg" alt="">
+                    </div>
+                    <p>Trendy Kurtis and Sets</p>
+                    <p><span>Min 60% Off</span> </p>
+                    <p class="explore">Libas, Visudh,Vrangler</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/fashion_best_p5.jpeg" alt="">
+                    </div>
+                    <p>Niker ,ADIDAS & more</p>
+                    <p><span>Upto 50% Off</span> </p>
+                    <p class="explore">Men's Sorts Shoes</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/elect_p6.jpeg" alt="">
+                    </div>
+                    <p>Best Of Hair Dryers</p>
+                    <p><span>From ₹299</span> </p>
+                    <p class="explore">Philips,Nova,havells & More</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p4.jpeg" alt="">
+                    </div>
+                    <p>Electric Kettles</p>
+                    <p><span>From ₹4,199</span> </p>
+                    <p class="explore">Big Savings!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p6.jpeg" alt="">
+                    </div>
+                    <p>Samsung Regrigrator</p>
+                    <p><span> Up to 65% Off</span> </p>
+                    <p class="explore">Buy Now!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p2.jpeg" alt="">
+                    </div>
+                    <p>Induction Coocktops.</p>
+                    <p><span>Min 80% Off</span> </p>
+                    <p class="explore">Shop Now!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p5.jpeg" alt="">
+                    </div>
+                    <p>Top Load Washing Machines</p>
+                    <p><span>Min ₹1,950 Off</span> </p>
+                    <p class="explore">Big Savings</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p1.jpeg" alt="">
+                    </div>
+                    <p>Inverters</p>
+                    <p><span>Min 70% Off</span> </p>
+                    <p class="explore">Grab Now!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p3.jpeg" alt="">
+                    </div>
+                    <p>Electric Kettles</p>
+                    <p><span>Min 70% Off</span> </p>
+                    <p class="explore">Grab Now!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p6.jpeg" alt="">
+                    </div>
+                    <p>Women's Dress Materials</p>
+                    <p><span>Min 80% Off</span> </p>
+                    <p class="explore">Big Savings!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p3.jpeg" alt="">
+                    </div>
+                    <p>Dresses And Gowns</p>
+                    <p><span>Min 70% Off</span> </p>
+                    <p class="explore">Buy Now!</p>
+                </div>
+            </div>
+            <button id="prev_fashion_best_seller"><i class="fas fa-chevron-left"></i></button>
+            <button id="next_fashion_best_seller"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+    </div>
+    <!-- fashion best seller section end -->
+    <!-- five offer sticker section start -->
+    <div class="offer_sticker_container">
+        <div class="sticker">
+            <img src="images/offer_sticker_p13.jpg" alt="">
+        </div>
+        <div class="sticker">
+            <img src="images/offer_sticker_p14.jpg" alt="">
+        </div>
+        <div class="sticker">
+            <img src="images/offer_sticker_p15.jpg " alt="">
+        </div>
+    </div>
+    <!-- five offer sticker section end-->
+    <!--six offer sticker section start-->
+    <div class="featured_brand">
+        <div class="featured_text">
+            <h3>Featured brand</h3>
+        </div>
+        <ul id="featured_brand_slider2">
+            <li><img src="images/offer_sticker_p16.jpeg" alt=""></li>
+            <li><img src="images/offer_sticker_p17.jpeg" alt=""></li>
+            <li><img src="images/offer_sticker_p18.jpeg" alt=""></li>
+            <li><img src="images/offer_sticker_p19.jpeg" alt=""></li>
+            <li><img src="images/featured_p4.jpeg" alt=""></li>
+            <li><img src="images/featured_p5.jpeg" alt=""></li>
+            <li><img src="images/featured_p6.jpeg" alt=""></li>
+            <li><img src="images/featured_p7.jpeg" alt=""></li>
+        </ul>
+        <button id="prev_featured_brand2"><i class="fas fa-chevron-left"></i></button>
+        <button id="next_featured_brand2"><i class="fas fa-chevron-right"></i></button>
+    </div>
+    <!--six offer sticker section end-->
+
+    <!--top deals on electronics section start-->
+    <div class="best_value_fashion_and_sticker_container" id="top_deals_on_electronics">
+        <div class="best_value_fashion" id="top_rated_appliances">
+            <div id="top_deals_on_electronics_view_all">
+                <h3>Top Deals On<br>Electronics</h3><button>VIEW ALL</button><img src="images/electronics1.jpg" alt="">
+            </div>
+            <div class="product_slider_container" id="top_deals_on_electronics_slider">
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/top_deals_on_electronics_p.jpeg" alt="">
+                    </div>
+                    <p>Cables,Charger & More</p>
+                    <p><span>SHOP NOW!</span>!</span> </p>
+                    <p class="explore">starting ₹49 </p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/top_deals_on_electronics_p1.jpeg" alt="">
+                    </div>
+                    <p>Mi 360 degree 1080p WiFi Smart sec.. </p>
+                    <p><span>Just ₹2,799</span> </p>
+                    <p>₹2,799<span id="explore"><del> ₹3,999</del></span></p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/top_deals_on_electronics_p2.jpeg" alt="">
+                    </div>
+                    <p>Fire-Boltt Smartwatches</p>
+                    <p><span>From ₹1.499</span> </p>
+                    <p class="explore">SpO2 & heartrate monitor</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/top_deals_on_electronics_p3.jpeg" alt="">
+                    </div>
+                    <p>Camera Flashes</p>
+                    <p><span>Min. 30% Off</span> </p>
+                    <p class="explore">Digitech,Kodak..</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/top_deals_on_electronics_p4.jpeg" alt="">
+                    </div>
+                    <p>Mobile Pouches</p>
+                    <p><span>From ₹98</span> </p>
+                    <p class="explore">Protect Your mobile</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/top_deals_on_electronics_p5.jpeg" alt="">
+                    </div>
+                    <p>Camera Bags</p>
+                    <p><span>Upto 50% Off</span> </p>
+                    <p class="explore">Carry your camera safely</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/elect_p6.jpeg" alt="">
+                    </div>
+                    <p>Best Of Hair Dryers</p>
+                    <p><span>From ₹299</span> </p>
+                    <p class="explore">Philips,Nova,havells & More</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p4.jpeg" alt="">
+                    </div>
+                    <p>Electric Kettles</p>
+                    <p><span>From ₹4,199</span> </p>
+                    <p class="explore">Big Savings!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p6.jpeg" alt="">
+                    </div>
+                    <p>Samsung Regrigrator</p>
+                    <p><span> Up to 65% Off</span> </p>
+                    <p class="explore">Buy Now!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p2.jpeg" alt="">
+                    </div>
+                    <p>Induction Coocktops.</p>
+                    <p><span>Min 80% Off</span> </p>
+                    <p class="explore">Shop Now!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p5.jpeg" alt="">
+                    </div>
+                    <p>Top Load Washing Machines</p>
+                    <p><span>Min ₹1,950 Off</span> </p>
+                    <p class="explore">Big Savings</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p1.jpeg" alt="">
+                    </div>
+                    <p>Inverters</p>
+                    <p><span>Min 70% Off</span> </p>
+                    <p class="explore">Grab Now!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p3.jpeg" alt="">
+                    </div>
+                    <p>Electric Kettles</p>
+                    <p><span>Min 70% Off</span> </p>
+                    <p class="explore">Grab Now!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p6.jpeg" alt="">
+                    </div>
+                    <p>Women's Dress Materials</p>
+                    <p><span>Min 80% Off</span> </p>
+                    <p class="explore">Big Savings!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p3.jpeg" alt="">
+                    </div>
+                    <p>Dresses And Gowns</p>
+                    <p><span>Min 70% Off</span> </p>
+                    <p class="explore">Buy Now!</p>
+                </div>
+            </div>
+            <button id="prev_top_deals_on_electronics"><i class="fas fa-chevron-left"></i></button>
+            <button id="next_top_deals_on_electronics"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+    </div>
+    <!--top deals on electronics section end-->
+    <!--seventh sticker section start-->
+    <div class="fourth_offer_sticker_container">
+        <div class="fourth_sticker">
+            <img src="images/offer_sticker_p20.jpg" alt="">
+        </div>
+        <div class="fourth_sticker">
+            <img src="images/offer_sticker_p21.jpg" alt="">
+        </div>
+        <div class="fourth_sticker">
+            <img src="images/offer_sticker_p22.jpg" alt="">
+        </div>
+        <div class="fourth_sticker">
+            <img src="images/offer_sticker_p23.jpg" alt="">
+        </div>
+    </div>
+    <!--seventh sticker section end-->
+
+
+    <!-- top offers section start -->
+    <div class="best_value_fashion_and_sticker_container" id="top_offers">
+        <div class="best_value_fashion" id="top_rated_appliances">
+            <div id="top_offers_view_all">
+                <h3>Top Offers</h3><button>VIEW ALL</button><img src="images/sticker1.jpg" alt="">
+            </div>
+            <div class="product_slider_container" id="top_offes_slider">
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/top_deals_on_electronics_p.jpeg" alt="">
+                    </div>
+                    <p>Cables,Charger & More</p>
+                    <p><span>SHOP NOW!</span>!</span> </p>
+                    <p class="explore">starting ₹49 </p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/top_deals_on_electronics_p1.jpeg" alt="">
+                    </div>
+                    <p>Mi 360 degree 1080p WiFi Smart sec.. </p>
+                    <p><span>Just ₹2,799</span> </p>
+                    <p>₹2,799<span id="explore"><del> ₹3,999</del></span></p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/top_deals_on_electronics_p2.jpeg" alt="">
+                    </div>
+                    <p>Fire-Boltt Smartwatches</p>
+                    <p><span>From ₹1.499</span> </p>
+                    <p class="explore">SpO2 & heartrate monitor</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/top_deals_on_electronics_p3.jpeg" alt="">
+                    </div>
+                    <p>Camera Flashes</p>
+                    <p><span>Min. 30% Off</span> </p>
+                    <p class="explore">Digitech,Kodak..</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/top_deals_on_electronics_p4.jpeg" alt="">
+                    </div>
+                    <p>Mobile Pouches</p>
+                    <p><span>From ₹98</span> </p>
+                    <p class="explore">Protect Your mobile</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/top_deals_on_electronics_p5.jpeg" alt="">
+                    </div>
+                    <p>Camera Bags</p>
+                    <p><span>Upto 50% Off</span> </p>
+                    <p class="explore">Carry your camera safely</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/elect_p6.jpeg" alt="">
+                    </div>
+                    <p>Best Of Hair Dryers</p>
+                    <p><span>From ₹299</span> </p>
+                    <p class="explore">Philips,Nova,havells & More</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p4.jpeg" alt="">
+                    </div>
+                    <p>Electric Kettles</p>
+                    <p><span>From ₹4,199</span> </p>
+                    <p class="explore">Big Savings!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p6.jpeg" alt="">
+                    </div>
+                    <p>Samsung Regrigrator</p>
+                    <p><span> Up to 65% Off</span> </p>
+                    <p class="explore">Buy Now!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p2.jpeg" alt="">
+                    </div>
+                    <p>Induction Coocktops.</p>
+                    <p><span>Min 80% Off</span> </p>
+                    <p class="explore">Shop Now!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p5.jpeg" alt="">
+                    </div>
+                    <p>Top Load Washing Machines</p>
+                    <p><span>Min ₹1,950 Off</span> </p>
+                    <p class="explore">Big Savings</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p1.jpeg" alt="">
+                    </div>
+                    <p>Inverters</p>
+                    <p><span>Min 70% Off</span> </p>
+                    <p class="explore">Grab Now!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p3.jpeg" alt="">
+                    </div>
+                    <p>Electric Kettles</p>
+                    <p><span>Min 70% Off</span> </p>
+                    <p class="explore">Grab Now!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p6.jpeg" alt="">
+                    </div>
+                    <p>Women's Dress Materials</p>
+                    <p><span>Min 80% Off</span> </p>
+                    <p class="explore">Big Savings!</p>
+                </div>
+                <div class="product pad">
+                    <div class="img_container">
+                        <img src="images/deal_p3.jpeg" alt="">
+                    </div>
+                    <p>Dresses And Gowns</p>
+                    <p><span>Min 70% Off</span> </p>
+                    <p class="explore">Buy Now!</p>
+                </div>
+            </div>
+            <button id="prev_top_offers"><i class="fas fa-chevron-left"></i></button>
+            <button id="next_top_offers"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+    </div>
+    <!-- top offers section end -->
+
+    <!--eight offer sticker section start-->
+    <div class="offer_sticker_container">
+        <div class="sticker">
+            <img src="images/offer_sticker_p26.jpg" alt="">
+        </div>
+        <div class="sticker">
+            <img src="images/offer_sticker_p27.jpg" alt="">
+        </div>
+        <div class="sticker">
+            <img src="images/offer_sticker_p28.jpg" alt="">
+        </div>
+    </div>
+    <!--eight offer sticker section end-->
+
+    <!--nine offer sticker section start-->
+    <div class="offer_sticker_container">
+        <div class="sticker">
+            <img src="images/offer_sticker_p29.jpg" alt="">
+        </div>
+        <div class="sticker">
+            <img src="images/offer_sticker_p30.jpg" alt="">
+        </div>
+        <div class="sticker">
+            <img src="images/offer_sticker_p31.jpg" alt="">
+        </div>
+    </div>
+    <!--nine offer sticker section end-->
+
+    <!--tenth offer sticker section start-->
+    <div class="offer_sticker_container">
+        <div class="sticker">
+            <img src="images/offer_sticker_p32.jpg" alt="">
+        </div>
+        <div class="sticker">
+            <img src="images/offer_sticker_P33.jpeg" alt="">
+        </div>
+        <div class="sticker">
+            <img src="images/offer_sticker_p34.jpeg" alt="">
+        </div>
+    </div>
+    <!--tenth offer sticker section end-->
+
+    <!--11th offer sticker section start-->
+    <div class="fourth_offer_sticker_container">
+        <div class="fourth_sticker">
+            <img src="images/offer_sticker_p35.jpg" alt="">
+        </div>
+        <div class="fourth_sticker">
+            <img src="images/offer_sticker_p36.jpg" alt="">
+        </div>
+        <div class="fourth_sticker">
+            <img src="images/offer_sticker_p37.jpg" alt="">
+        </div>
+        <div class="fourth_sticker">
+            <img src="images/offer_sticker_p38.jpg" alt="">
+        </div>
+    </div>
+    <!--11th offfe sticker section end-->
+
+    <hr id="horizontal_line">
+    <!-- footer section start -->
+    <div class="footer">
+        <div class="top_stories_section">
+            <div class="top_stories">
+                <h3>Top Stories:<span>Brand Directory</span></h3>
+            </div>
+
+            <div class="_1GTrm1">
+                <span class="_2oyLgr">
+                    MOST SEARCHED FOR ON FLIPKART
+                    <!-- -->:
+                </span>
+                <a class="_3CuAg8" href="">iPhone 13</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">iPhone 13 Pro</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">iPhone 13 Pro Max</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">iPhone 13 Mini</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">TV &amp; Appliances Big Billion Days Sale</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Pay LaterEMI</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Big Billion Days</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Motor Vehicle Insurance</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Quick</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Ed A Mamma Clothing</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Books</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Electronics: TV &amp; Home Appliances Sale</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Grand Kitchen &amp;Home Appliances Sale</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Auto Accessories Store</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Streak Sunglasses</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Gold Coins</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">BGM Big Billion Day Sale</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Home BBD Dhamaka Sale</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Plus</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Super Coin</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart COVID-19 Insurance</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Help Centre</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Track Orders</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Manage Orders</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Return Orders</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Gift Cards Store</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Sarees</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Axis Bank Credit Card</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Pay Later</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Jewellery</a>
+                <SPan|></SPan>
+                    <a class="_3CuAg8" href="">Watches</a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Gold Coin</a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Mangalsutra</a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Sunglasses</a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Mi Sunglasses</a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Backpacks</a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Ray Ban Sunglasses</a><SPan>|</SPan>
+
+            </div>
+            <div class="_1GTrm1">
+                <span class="_2oyLgr">
+                    MOBILES :
+                    <!-- -->:
+                </span>
+                <a class="_3CuAg8" href="">iPhone 13 </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">iPhone 13 Pro </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">iPhone 13 Pro Max </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">iPhone 13 Mini </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">TV &amp; Appliances Big Billion Days Sale </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Pay LaterEMI </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Big Billion Days </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Motor Vehicle Insurance </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Quick </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Ed A Mamma Clothing </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Books </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Electronics: TV &amp; Home Appliances Sale /a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Grand Kitchen &amp;Home Appliances Sale </a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Auto Accessories Store </a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Streak Sunglasses </a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Gold Coins </a<SPan>|</SPan>><SPan>|</SPan>
+                        <a class="_3CuAg8" href="">BGM Big Billion Day Sale </a><SPan>|</SPan>
+                        <a class="_3CuAg8" href="">Home BBD Dhamaka Sale </a><SPan>|</SPan>
+                        <a class="_3CuAg8" href="">Flipkart Plus |</a><SPan>|</SPan>
+                        <a class="_3CuAg8" href="">Flipkart Super Coin </a><SPan>|</SPan>
+                        <a class="_3CuAg8" href="">Flipkart COVID-19 Insurance </a><SPan>|</SPan>
+                        <a class="_3CuAg8" href="">Flipkart Help Centre </a><SPan>|</SPan>
+                        <a class="_3CuAg8" href="">Flipkart Track Orders </a><SPan>|</SPan>
+                        <a class="_3CuAg8" href="">Flipkart Manage Orders </a><SPan>|</SPan>
+                        <a class="_3CuAg8" href="">Flipkart Return Orders </a><SPan>|</SPan>
+                        <a class="_3CuAg8" href="">Flipkart Gift Cards Store </a><SPan>|</SPan>
+                        <a class="_3CuAg8" href="">Sarees |</a><SPan>|</SPan>
+                        <a class="_3CuAg8" href="">Flipkart Axis Bank Credit Card </a><SPan>|</SPan>
+                        <a class="_3CuAg8" href="">Flipkart Pay Later </a><SPan>|</SPan>
+                        <a class="_3CuAg8" href="">Jewellery </a><SPan>|</SPan>
+                        <a class="_3CuAg8" href="">Watches </a><SPan>|</SPan>
+                        <a class="_3CuAg8" href="">Gold Coin </a><SPan>|</SPan>
+                        <a class="_3CuAg8" href="">Mangalsutra </a><SPan>|</SPan>
+                        <a class="_3CuAg8" href="">Sunglasses </a><SPan>|</SPan>
+                        <a class="_3CuAg8" href="">Mi Sunglasses </a><SPan>|</SPan>
+                        <a class="_3CuAg8" href="">Backpacks </a><SPan>|</SPan>
+                        <a class="_3CuAg8" href="">Ray Ban Sunglasses </a><SPan>|</SPan>
+
+            </div>
+            <div class="_1GTrm1">
+                <span class="_2oyLgr">
+                    CAMERA:
+                    <!-- -->:
+                </span>
+                <a class="_3CuAg8" href="">iPhone 13 </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">iPhone 13 Pro </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">iPhone 13 Pro Max </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">iPhone 13 Mini </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">TV &amp; Appliances Big Billion Days Sale </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Pay LaterEMI |</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Big Billion Days </a>
+                <a class="_3CuAg8" href="">Flipkart Motor Vehicle Insurance </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Quick </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Ed A Mamma Clothing </a><SPan>|</SPan>
+
+
+            </div>
+            <div class="_1GTrm1">
+                <span class="_2oyLgr">
+                    LAPTOP :
+                    <!-- -->:
+                </span>
+                <a class="_3CuAg8" href="">iPhone 13 </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">iPhone 13 Pro </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">iPhone 13 Pro Max </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">iPhone 13 Mini</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">TV &amp; Appliances Big Billion Days Sale </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Pay LaterEMI </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Big Billion Days</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Motor Vehicle Insurance </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Quick </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Ed A Mamma Clothing </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Books</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Electronics: TV &amp; Home Appliances Sale </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Grand Kitchen &amp;Home Appliances Sale </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Auto Accessories Store </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Streak Sunglasses </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Gold Coins </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">BGM Big Billion Day Sale </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Home BBD Dhamaka Sale </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Plus </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Super Coin </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart COVID-19 Insurance </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Help Centre </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Track Orders </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Manage Orders </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Return Orders </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Gift Cards Store </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Sarees </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Axis Bank Credit Card </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Pay Later </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Jewellery </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Watches </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Gold Coin </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Mangalsutra </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Sunglasses </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Mi Sunglasses </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Backpacks </a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Ray Ban Sunglasses </a><SPan>|</SPan>
+
+            </div>
+            <div class="_1GTrm1">
+                <span class="_2oyLgr">
+                    TVS :
+                    <!-- -->:
+                </span>
+                <a class="_3CuAg8" href="">iPhone 13</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">iPhone 13 Pro</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">iPhone 13 Pro Max</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">iPhone 13 Mini</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">TV &amp; Appliances Big Billion Days Sale</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Pay LaterEMI</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Big Billion Days</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Motor Vehicle Insurance</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Quick</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Ed A Mamma Clothing</a><SPan>|</SPan>
+
+            </div>
+            <div class="_1GTrm1">
+                <span class="_2oyLgr">
+                    LARGE APPLIANCES:
+                    <!-- -->:
+                </span>
+                <a class="_3CuAg8" href="">iPhone 13</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">iPhone 13 Pro</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">iPhone 13 Pro Max</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">iPhone 13 Mini</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">TV &amp; Appliances Big Billion Days Sale</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Pay LaterEMI</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Big Billion Days</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Motor Vehicle Insurance</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Quick</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Ed A Mamma Clothing</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Books</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Electronics: TV &amp; Home Appliances Sale</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Grand Kitchen &amp;Home Appliances Sale</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Auto Accessories Store</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Streak Sunglasses</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Gold Coins</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">BGM Big Billion Day Sale</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Home BBD Dhamaka Sale</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Plus</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Super Coin</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart COVID-19 Insurance</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Help Centre</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Track Orders</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Manage Orders</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Return Orders</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Gift Cards Store</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Sarees</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Axis Bank Credit Card</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Pay Later</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Jewellery</a>
+                <SPan|></SPan>
+                    <a class="_3CuAg8" href="">Watches</a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Gold Coin</a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Mangalsutra</a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Sunglasses</a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Mi Sunglasses</a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Backpacks</a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Ray Ban Sunglasses</a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Watches</a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Gold Coin</a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Mangalsutra</a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Sunglasses</a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Mi Sunglasses</a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Backpacks</a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Ray Ban Sunglasses</a><SPan>|</SPan>
+
+            </div>
+            <div class="_1GTrm1">
+                <span class="_2oyLgr">
+                    CLOTHING:
+                    <!-- -->:
+                </span>
+                <a class="_3CuAg8" href="">iPhone 13</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">iPhone 13 Pro</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">iPhone 13 Pro Max</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">iPhone 13 Mini</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">TV &amp; Appliances Big Billion Days Sale</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Pay LaterEMI</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Big Billion Days</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Motor Vehicle Insurance</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Quick</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Ed A Mamma Clothing</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Books</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Electronics: TV &amp; Home Appliances Sale</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Grand Kitchen &amp;Home Appliances Sale</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Auto Accessories Store</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Streak Sunglasses</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Gold Coins</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">BGM Big Billion Day Sale</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Home BBD Dhamaka Sale</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Plus</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Super Coin</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart COVID-19 Insurance</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Help Centre</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Track Orders</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Manage Orders</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Return Orders</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Gift Cards Store</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Sarees</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Axis Bank Credit Card</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Pay Later</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Jewellery</a>
+                <SPan|></SPan>
+                    <a class="_3CuAg8" href="">Watches</a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Gold Coin</a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Mangalsutra</a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Sunglasses</a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Mi Sunglasses</a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Backpacks</a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Ray Ban Sunglasses</a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Watches</a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Gold Coin</a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Mangalsutra</a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Sunglasses</a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Mi Sunglasses</a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Backpacks</a><SPan>|</SPan>
+                    <a class="_3CuAg8" href="">Ray Ban Sunglasses</a><SPan>|</SPan>
+
+            </div>
+            <div class="_1GTrm1">
+                <span class="_2oyLgr">
+                    FOOTWEAR:
+                    <!-- -->:
+                </span>
+                <a class="_3CuAg8" href="">iPhone 13</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">iPhone 13 Pro</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">iPhone 13 Pro Max</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">iPhone 13 Mini</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">TV &amp; Appliances Big Billion Days Sale</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Pay LaterEMI</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Big Billion Days</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Motor Vehicle Insurance</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Quick</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Ed A Mamma Clothing</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Books</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Electronics: TV &amp; Home Appliances Sale</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Grand Kitchen &amp;Home Appliances Sale</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Auto Accessories Store</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Streak Sunglasses</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Gold Coins</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">BGM Big Billion Day Sale</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Home BBD Dhamaka Sale</a><SPan>|</SPan>
+
+
+            </div>
+            <div class="_1GTrm1">
+                <span class="_2oyLgr">
+                    GROCERIES:
+                    <!-- -->:
+                </span>
+                <a class="_3CuAg8" href="">iPhone 13</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">iPhone 13 Pro</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">iPhone 13 Pro Max</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">iPhone 13 Mini</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">TV &amp; Appliances Big Billion Days Sale</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Pay LaterEMI</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Big Billion Days</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Motor Vehicle Insurance</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Quick</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Ed A Mamma Clothing</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Books</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Electronics: TV &amp; Home Appliances Sale</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Grand Kitchen &amp;Home Appliances Sale</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Auto Accessories Store</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Streak Sunglasses</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Gold Coins</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">BGM Big Billion Day Sale</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Home BBD Dhamaka Sale</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Plus</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Super Coin</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart COVID-19 Insurance</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Help Centre</a><SPan>|</SPan>
+
+
+            </div>
+            <div class="_1GTrm1">
+                <span class="_2oyLgr">
+                    BEST SELLING ON FLIPKART:
+                    <!-- -->:
+                </span>
+                <a class="_3CuAg8" href="">iPhone 13</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">iPhone 13 Pro</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">iPhone 13 Pro Max</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">iPhone 13 Mini</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">TV &amp; Appliances Big Billion Days Sale</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Pay LaterEMI</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Big Billion Days</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Motor Vehicle Insurance</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Quick</a><SPan>|</SPan>
+
+
+            </div>
+            <div class="_1GTrm1">
+                <span class="_2oyLgr">
+                    FURNITURES:
+                    <!-- -->:
+                </span>
+                <a class="_3CuAg8" href="">iPhone 13</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">iPhone 13 Pro</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">iPhone 13 Pro Max</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">iPhone 13 Mini</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">TV &amp; Appliances Big Billion Days Sale</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Pay LaterEMI</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Big Billion Days</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Motor Vehicle Insurance</a><SPan>|</SPan>
+                <a class="_3CuAg8" href="">Flipkart Quick</a><SPan>|</SPan>
+
+
+            </div>
+            <div class="one_step_shopping_destination">
+                <h4>Flipkart:The One-Step Fashion Destiination</h4>
+                <p>E-commerce is revolutionizing the way we all shop in India. Why do you want to hop from one store to
+                    another in search of the latest phone when you can find it on the Internet in a single click? Not
+                    only mobiles. Flipkart houses everything you can possibly imagine, from trending electronics like
+                    laptops, tablets, smartphones, and mobile accessories to in-vogue fashion staples like shoes,
+                    clothing and lifestyle accessories; from modern furniture like sofa sets, dining tables, and
+                    wardrobes to appliances that make your life easy like washing machines, TVs, ACs, mixer grinder
+                    juicers and other time-saving kitchen and small appliances; from home furnishings like cushion
+                    covers, mattresses and bedsheets to toys and musical instruments, we got them all covered. You name
+                    it, and you can stay assured about finding them all here. For those of you with erratic working
+                    hours, Flipkart is your best bet. Shop in your PJs, at night or in the wee hours of the morning.
+                    This e-commerce never shuts down.</p><br><br>
+                <p>What's more, with our year-round shopping festivals and events, our prices are irresistible. We're
+                    sure you'll find yourself picking up more than what you had in mind. If you are wondering why you
+                    should shop from Flipkart when there are multiple options available to you, well, the below will
+                    answer your question.</p>
+            </div>
+            <div class="one_step_shopping_destination">
+                <h4>Flipkart plus</h4>
+                <p>A world of limitless possibilities awaits you - Flipkart Plus was kickstarted as a loyalty reward
+                    programme for all its regular customers at zero subscription fee. All you need is 500 supercoins to
+                    be a part of this service. For every 100 rupees spent on Flipkart order, Plus members earns 4
+                    supercoins & non-plus members earn 2 supercoins. Free delivery, early access during sales and
+                    shopping festivals, exchange offers and priority customer service are the top benefits to a Flipkart
+                    Plus member. In short, earn more when you shop more!</p><br><br>
+                <p>What's more, you can even use the Flipkart supercoins for a number of exciting services, like: <br>
+                    An annual Zomato Gold membership <br>
+                    An annual Hotstar Premium membership <br>
+                    6 months Gaana plus subscription <br>
+                    Rupees 550 instant discount on flights on ixigo <br>
+                    Check out https://www.flipkart.com/plus/all-offers for the entire list. Terms and conditions apply.
+                    <br>
+                </p>
+            </div>
+            <div class="one_step_shopping_destination">
+                <h4>No Cost EMI</h4>
+                <p>Did you know debit card holders account for 79.38 crore in the country, while there are only 3.14
+                    crore credit card holders? After enabling EMI on Credit Cards, in another attempt to make online
+                    shopping accessible to everyone, Flipkart introduces EMI on Debit Cards, empowering you to shop
+                    confidently with us without having to worry about pauses in monthly cash flow. At present, we have
+                    partnered with Axis Bank, HDFC Bank, State Bank of India and ICICI Bank for this facility. More
+                    power to all our shoppers! Terms and conditions apply.
+                </p><br>
+
+            </div>
+            <div class="one_step_shopping_destination">
+                <h4>Mobile Exchange Offer</h4>
+                <p>Get an instant discount on the phone that you have been eyeing on. Exchange your old mobile for a new
+                    one after the Flipkart experts calculate the value of your old phone, provided it is in a working
+                    condition without damage to the screen. If a phone is applicable for an exchange offer, you will see
+                    the 'Buy with Exchange' option on the product description of the phone. So, be smart, always opt for
+                    an exchange wherever possible. Terms and conditions apply.
+                </p><br>
+
+            </div>
+            <div class="one_step_shopping_destination">
+                <h4>What Can You Buy From Flipkart</h4>
+                <br>
+
+            </div>
+            <div class="one_step_shopping_destination">
+                <h4>Mobile Phones</h4>
+                <p>From budget phones to state-of-the-art smartphones, we have a mobile for everybody out there. Whether
+                    you're looking for larger, fuller screens, power-packed batteries, blazing-fast processors,
+                    beautification apps, high-tech selfie cameras or just large internal space, we take care of all the
+                    essentials. Shop from top brands in the country like Samsung, Apple, Oppo, Xiaomi, Realme, Vivo, and
+                    Honor to name a few. Rest assured, you're buying from only the most reliable names in the market.
+                    What's more, with Flipkart's Complete Mobile Protection Plan, you will never again find the need to
+                    run around service centres. This plan entails you to a number of post-purchase solutions, starting
+                    at as low as Rupees 99 only! Broken screens, liquid damage to phone, hardware and software glitches,
+                    and replacements - the Flipkart Complete Mobile Protection covers a comprehensive range of
+                    post-purchase problems, with door-to-door services.
+                </p><br>
+
+            </div>
+            <div class="one_step_shopping_destination">
+                <h4>Electronic Devices and Accessories</h4>
+                <p>When it comes to laptops, we are not far behind. Filter among dozens of super-fast operating systems,
+                    hard disk capacity, RAM, lifestyle, screen size and many other criterias for personalized results in
+                    a flash. All you students out there, confused about what laptop to get? Our Back To College Store
+                    segregates laptops purpose wise (gaming, browsing and research, project work, entertainment, design,
+                    multitasking) with recommendations from top brands and industry experts, facilitating a shopping
+                    experience that is quicker and simpler.
+                </p><br>
+                <p>
+                    Photography lovers, you couldn't land at a better page than ours. Cutting-edge DSLR cameras, ever
+                    reliable point-and-shoot cameras, millennial favourite instant cameras or action cameras for
+                    adventure junkies: our range of cameras is as much for beginners as it is for professionals. Canon,
+                    Nikon, GoPro, Sony, and Fujifilm are some big names you'll find in our store. Photography lovers,
+                    you couldn't land at a better page than ours. Cutting-edge DSLR cameras, ever reliable
+                    point-and-shoot cameras, millennial favourite instant cameras or action cameras for adventure
+                    junkies: our range of cameras is as much for beginners as it is for professionals. Canon, Nikon,
+                    GoPro, Sony, and Fujifilm are some big names you'll find in our store.
+                </p><br>
+                <p>Turn your home into a theatre with a stunning surround sound system. Choose from our elaborate range
+                    of Sony home theatres, JBL soundbars and Philips tower speakers for an experience to remember.</p>
+                <br>
+                <p>
+                    How about jazzing up your phone with our quirky designer cases and covers? Our wide-ranging mobile
+                    accessories starting from headphones, power banks, memory cards, mobile chargers, to selfie sticks
+                    can prove to be ideal travel companions for you and your phone; never again worry about running out
+                    of charge or memory on your next vacation.
+                </p>
+
+
+            </div><br>
+            <div class="one_step_shopping_destination">
+                <h4>Large Appliance</h4>
+                <p>Sleek TVs, power-saving refrigerators, rapid-cooling ACs, resourceful washing machines - discover
+                    everything you need to run a house under one roof. Our Dependable TV and Appliance Store ensures
+                    zero transit damage, with a replacement guarantee if anything goes wrong; delivery and installation
+                    as per your convenience and a double warranty (Official Brand Warranty along with an extended
+                    Flipkart Warranty) - rest assured, value for money is what is promised and delivered. Shop from
+                    market leaders in the country like Samsung, LG, Whirlpool, Midea, Mi, Vu, Panasonic, Godrej, Sony,
+                    Daikin, and Hitachi among many others.
+                </p><br>
+
+            </div>
+            <div class="one_step_shopping_destination">
+                <h4>Small Home Appliance</h4>
+                <p>Find handy and practical home appliances designed to make your life simpler: electric kettles, OTGs,
+                    microwave ovens, sandwich makers, hand blenders, coffee makers, and many more other time-saving
+                    appliances that are truly crafted for a quicker lifestyle. Live life king size with these appliances
+                    at home.
+
+                </p><br>
+
+            </div>
+            <div class="one_step_shopping_destination">
+                <h4>Lifestyle</h4>
+                <p>Flipkart, 'India ka Fashion Capital', is your one-stop fashion destination for anything and
+                    everything you need to look good. Our exhaustive range of Western and Indian wear, summer and winter
+                    clothing, formal and casual footwear, bridal and artificial jewellery, long-lasting make-up,
+                    grooming tools and accessories are sure to sweep you off your feet. Shop from crowd favourites like
+                    Vero Moda, Forever 21, Only, Arrow, Woodland, Nike, Puma, Revlon, Mac, and Sephora among dozens of
+                    other top-of-the-ladder names. From summer staple maxi dresses, no-nonsense cigarette pants,
+                    traditional Bandhani kurtis to street-smart biker jackets, you can rely on us for a wardrobe that is
+                    up to date. Explore our in-house brands like Metronaut, Anmi, and Denizen, to name a few, for
+                    carefully curated designs that are the talk of the town. Get ready to be spoiled for
+                    choice.Festivals, office get-togethers, weddings, brunches, or nightwear - Flipkart will have your
+                    back each time.
+
+                </p><br>
+
+            </div>
+
+
+
+
+        </div>
+        <div class="main_footer_section">
+            <div class="about_policy">
+                <ul>
+                    <li>
+                        <h4>ABOUT</h4>
+                        <a href="">Contact us</a>
+                        <a href="">About Us</a>
+                        <a href="">Careers</a>
+                        <a href="">Flipkart Stories</a>
+                        <a href="">Press</a>
+                        <a href="">Flipkart Wholesales</a>
+                        <a href="">Corparate Information</a>
+                    </li>
+                    <li>
+                        <h4>HELP</h4>
+                        <a href="">Payments</a>
+                        <a href="">Shipping</a>
+                        <a href="">Cancellation & Return</a>
+                        <a href="">FAQ</a>
+                        <a href="">Report Infringment</a>
+                    </li>
+                    <li>
+                        <h4>POLICY</h4>
+                        <a href="">Return Policy</a>
+                        <a href="">Terms of Use</a>
+                        <a href="">Securiy</a>
+                        <a href="">Privacy</a>
+                        <a href="">Sitemap</a>
+                        <a href="">EPR Compliance</a>
+                    </li>
+                    <li>
+                        <h4>SOCIAL</h4>
+                        <a href="">Youtube</a>
+                        <a href="">Facebook</a>
+                        <a href="">twitter</a>
+                    </li>
+
+
+                    <li class="margin">
+                        <h4>Mail Us:</h4>
+                        <p>Flipkart Internet Private Limited,<br>
+
+                            Buildings Alyssa, Begonia & <br>
+
+                            Clove Embassy Tech Village, <br>
+
+                            Outer Ring Road, Devarabeesanahalli Village, <br>
+
+                            Bengaluru, 560103, <br>
+
+                            Karnataka, India</p>
+                    </li>
+                    <li>
+                        <h4>Registerd Office Address</h4>
+                        <p>Flipkart Internet Private Limited, <br>
+
+                            Buildings Alyssa, Begonia & <br>
+
+                            Clove Embassy Tech Village, <br>
+
+                            Outer Ring Road, Devarabeesanahalli Village, <br>
+
+                            Bengaluru, 560103, <br>
+
+                            Karnataka, India <br>
+
+                            CIN : U51109KA2012PTC066107 <br>
+
+                            Telephone: <a href="tel:+4733378901"> 1800 202 9898</a>
+                        </p>
+
+
+                    </li>
+
+                </ul>
+            </div>
+            <div class="footer_content">
+                <ul>
+                    <li><img src="images/footer_i1.svg" alt=""><a href="">Sell On FlipKart</a></li>
+                    <li><img src="images/footer_i2.svg" alt=""><a href="">Advertise</a></li>
+                    <li><img src="images/footer_i3.svg" alt=""><a href="">Gift Cards</a></li>
+                    <li><img src="images/footer_i4.svg" alt=""><a href="">Help Center</a></li>
+                    <li>© 2021 Vikash Prakash</li>
+                    <li><img src="images/payment-method_69e7ec (1).svg" alt=""></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- footer section end -->
+
+    <!-- container end here -->
+
+
+
+
+
+    <!-- javascript code  -->
+    <script src="js/script.js"></script>
+    <script src="js/suggestions.js"></script>
+    <!-- javascript code end here -->
+</body>
+
+</html>
